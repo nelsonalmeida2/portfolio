@@ -26,7 +26,7 @@ nav h1 {
 
 nav div {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
 nav div p {
@@ -62,9 +62,10 @@ section.home div {
     gap: 10px;
 }
 
-section.home p {
+section.home pre {
     font-size: 18px;
     color: #555;
+    padding-bottom: 0%;
 }
 
 section.home h2 {
@@ -112,25 +113,8 @@ button:hover {
     background-size: contain;
 }
 
-
-@media (max-width: 768px) {
-    nav div {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    section.home {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-
-    section.home img {
-        max-width: 200px;
-    }
-
-    button {
-        width: 100%;
-    }
+.home div div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
