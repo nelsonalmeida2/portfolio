@@ -39,14 +39,17 @@ nav div p:hover {
     color: #e3e3e3;
 }
 
-section.home {
-    display: flex;
+section {
     justify-content: center;
     align-items: center;
     min-height: calc(100vh - 50px);
     background-color: #fff;
     padding: 20px;
     gap: 30px;
+}
+
+.home {
+    display: flex;
 }
 
 section.home img {
@@ -62,18 +65,18 @@ section.home div {
     gap: 10px;
 }
 
-section.home pre {
+section p {
     font-size: 18px;
     color: #555;
     padding-bottom: 0%;
 }
 
-section.home h2 {
+section h2 {
     font-size: 32px;
     color: #222;
 }
 
-section.home h3 {
+section h3 {
     font-size: 24px;
     color: #444;
 }
