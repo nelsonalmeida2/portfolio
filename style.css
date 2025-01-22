@@ -81,8 +81,7 @@ nav a:hover {
 }
 
 .home button {
-    width: 40px;
-    height: 40px;
+
     background-size: cover;
     background-position: center;
     border: none;
@@ -93,16 +92,22 @@ nav a:hover {
 
 
 #icon_linkedin {
+    width: 40px;
+    height: 40px;
     background: url('/images/linkedin_3536569.png') no-repeat center;
     background-size: contain;
 }
 
 #icon_github {
+    width: 40px;
+    height: 40px;
     background: url('/images/github_3291695.png') no-repeat center;
     background-size: contain;
 }
 
 #cv {
+    width: 120px;
+    height: 40px;
     padding: 10px 20px;
     background: #ffcc00;
     border: none;
