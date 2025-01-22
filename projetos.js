@@ -1,4 +1,4 @@
-const produtos = [
+const projetos = [
     {
       "id": 1,
       "title": "Sea Battle",
