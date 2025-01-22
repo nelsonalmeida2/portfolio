@@ -50,7 +50,7 @@ nav a:hover {
 }
 
 /* Home Section */
-.home {
+#home {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,7 +61,7 @@ nav a:hover {
     color: white;
 }
 
-.home img {
+#home img {
     width: 150px;
     height: 150px;
     object-fit: cover;
@@ -70,18 +70,19 @@ nav a:hover {
     border: 3px solid white;
 }
 
-.home h2 {
+#home h2 {
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-.home div {
+#home div {
     display: flex;
     gap: 15px;
 }
 
-.home button {
-
+#icon_linkedin, #icon_github  {
+    width: 40px;
+    height: 40px;
     background-size: cover;
     background-position: center;
     border: none;
@@ -92,15 +93,11 @@ nav a:hover {
 
 
 #icon_linkedin {
-    width: 40px;
-    height: 40px;
     background: url('/images/linkedin_3536569.png') no-repeat center;
     background-size: contain;
 }
 
 #icon_github {
-    width: 40px;
-    height: 40px;
     background: url('/images/github_3291695.png') no-repeat center;
     background-size: contain;
 }
