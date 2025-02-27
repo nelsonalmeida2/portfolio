@@ -22,7 +22,7 @@ const projetos = [
       },
       {
         "id": 4,
-        "title": "Student Management Systems",
+        "title": "Student Management System",
         "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
         "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
         "github": "https://github.com/nelsonalmeida2/SeaBattle"
@@ -36,7 +36,7 @@ const projetos = [
       },
       {
         "id": 6,
-        "title": "Database of a Documentary System",
+        "title": "Document Database",
         "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
         "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
         "github": "https://github.com/nelsonalmeida2/WorldMeter"
