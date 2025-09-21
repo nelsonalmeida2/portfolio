@@ -3,70 +3,70 @@ const projetos = [
       "id": 1,
       "title": "The Night of the Living",
       "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "image": "img/projects/coffe.jpg",
       "github": "https://github.com/nelsonalmeida2/SeaBattle"
     },
     {
       "id": 2,
       "title": "Web Interfaces",
       "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+        "image": "img/projects/coffe.jpg",
       "github": "https://github.com/nelsonalmeida2/SeaBattle"
     },
     {
         "id": 3,
         "title": "Card Identifier System",
         "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-        "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+        "image": "img/projects/coffe.jpg",
         "github": "https://github.com/nelsonalmeida2/WorldMeter"
       },
       {
         "id": 4,
         "title": "Management System",
         "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-        "image": "images/school-management.png",
+          "image": "img/projects/coffe.jpg",
         "github": "https://github.com/nelsonalmeida2/SeaBattle"
       },
       {
         "id": 5,
         "title": "Irrigation System",
         "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-        "image": "images/irrigacao.png",
+          "image": "img/projects/coffe.jpg",
         "github": "https://github.com/nelsonalmeida2/WorldMeter"
       },
       {
         "id": 6,
         "title": "Document Database",
         "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-        "image": "images/document-database.png",
+          "image": "img/projects/coffe.jpg",
         "github": "https://github.com/nelsonalmeida2/WorldMeter"
       },
       {
         "id": 7,
         "title": "World Meter",
         "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-        "image": "/images/world_meter.png",
+          "image": "img/projects/coffe.jpg",
         "github": "https://github.com/nelsonFAlmeida/nelsonFAlmeida.github.io"
       },
     {
         "id": 8,
         "title": "Coffee Machine",
         "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-        "image": "/images/coffe.jpg",
+        "image": "img/projects/coffe.jpg",
         "github": "https://github.com/nelsonalmeida2/The-Night-of-the-Living"
       },
       {
         "id": 9,
         "title": "Mortal Kombat",
         "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-        "image": "/images/mortal_kombat.jpg",
+          "image": "img/projects/coffe.jpg",
         "github": "https://github.com/nelsonFAlmeida/nelsonFAlmeida.github.io"
       },
       {
         "id": 10,
         "title": "Sea Battle",
         "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-        "image": "/images/sea_battle.jpg",
+          "image": "img/projects/coffe.jpg",
         "github": "https://github.com/nelsonFAlmeida/nelsonFAlmeida.github.io"
       },
 ]

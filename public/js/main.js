@@ -1,4 +1,4 @@
-const projectsSection = document.querySelector('#projects .grid');
+const projectsSection = document.querySelector('.projects .grid');
 
 function carregarProjetos() {
     projetos.forEach(projeto => {
@@ -27,6 +27,22 @@ function carregarProjetos() {
     });
 }
 
+function carregarTecnologias() {
+    const technologiesSection = document.querySelector('.technologies .grid');
+    const technologyImages = ['CSharp.svg','C.svg','CSS3.svg','Django.svg','HTML5.svg','Java.svg','JavaScript.svg','Kotlin.svg','Microsoft-SQL-Server.svg','Python.svg','Selenium.svg','Tailwind-CSS.svg']; // Adicione os nomes dos arquivos aqui
+
+    technologyImages.forEach(imgName => {
+        const img = document.createElement('img');
+        img.src = `img/technologies/${imgName}`;
+        img.alt = imgName.split('.')[0];
+        technologiesSection.append(img);
+    });
+}
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     carregarProjetos();
-});
+    carregarTecnologias()
+    });
