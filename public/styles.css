@@ -9,6 +9,7 @@ body { min-height: 100vh; text-rendering: optimizeLegibility; -webkit-font-smoot
 img, picture { max-width: 100%; display: block; }
 input, button, textarea, select { font: inherit; }
 :root {
+  --bottom-nav-h: 56px;
   /* Colors (dark default) */
   --bg: #0f1216;
   --surface: #151a20;
@@ -100,6 +101,7 @@ a:focus-visible, button:focus-visible, .focus-ring {
 
 /* Buttons */
 .btn {
+  text-decoration: none;
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
@@ -238,6 +240,7 @@ a:focus-visible, button:focus-visible, .focus-ring {
 
 /* Bottom Nav (mobile) */
 .bottom-nav {
+  height: var(--bottom-nav-h);
   position: fixed;
   bottom: 0; left: 0; right: 0;
   background: var(--surface);
@@ -247,6 +250,7 @@ a:focus-visible, button:focus-visible, .focus-ring {
   z-index: 60;
 }
 .bottom-link {
+  display: flex; align-items: center; justify-content: center; height: 100%;
   padding: 12px;
   text-align: center;
   text-decoration: none;
@@ -263,7 +267,8 @@ a:focus-visible, button:focus-visible, .focus-ring {
 /* Media queries */
 @media (min-width: 641px) {
   .primary-nav { display: block; }
-  .show-on-mobile, .bottom-nav { display: none; }
+  .show-on-mobile, .bottom-nav {
+  height: var(--bottom-nav-h); display: none; }
   .hero__inner { grid-template-columns: 2fr 1fr; }
   .cards-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -273,3 +278,17 @@ a:focus-visible, button:focus-visible, .focus-ring {
 
 /* Section anchor offset & rhythm */
 section { scroll-margin-top: 80px; }
+
+
+/* No underline for buttons in any state */
+.btn:hover,
+.btn:focus,
+.btn:focus-visible,
+.btn:active { text-decoration: none; }
+
+/* Better spacing for Skills heading */
+#skills h2 { margin-bottom: var(--space-5); }
+
+@media (max-width: 640px) {
+  body { padding-bottom: var(--bottom-nav-h); }
+}
