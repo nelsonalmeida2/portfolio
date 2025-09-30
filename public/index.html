@@ -8,44 +8,32 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a class="skip-link" href="#conteudo">Skip to content</a>
+  <a class="skip-link" href="#content">Skip to content</a>
 
-  <!-- Navbar (sticky em tablet/desktop) -->
+  <!-- Top navigation (sticky on tablet/desktop) -->
   <header id="topbar" class="topbar" role="banner">
     <div class="container topbar__inner">
       <a href="#" class="brand tap-target" aria-label="Home">NA</a>
       <nav class="primary-nav" aria-label="Main navigation">
         <ul class="nav-list">
-          <li><a class="nav-link tap-target" href="#sobre" data-scroll>About</a></li>
-          <li><a class="nav-link tap-target" href="#projetos" data-scroll>Projects</a></li>
+          <li><a class="nav-link tap-target" href="#about" data-scroll>About</a></li>
+          <li><a class="nav-link tap-target" href="#projects" data-scroll>Projects</a></li>
           <li><a class="nav-link tap-target" href="#skills" data-scroll>Skills</a></li>
-          <li><a class="nav-link tap-target" href="#contacto" data-scroll>Contact</a></li>
+          <li><a class="nav-link tap-target" href="#technologies" data-scroll>Technologies</a></li>
+          <li><a class="nav-link tap-target" href="#contact" data-scroll>Contact</a></li>
           <li><a class="nav-link tap-target" href="cv.pdf" download>Resume</a></li>
         </ul>
       </nav>
       <div class="topbar__actions">
+        <a href="cv.pdf" download class="icon-btn tap-target only-mobile" aria-label="Download Resume">CV</a>
         <button id="theme-toggle" class="icon-btn tap-target" aria-pressed="false" aria-label="Toggle light/dark theme">
           <span aria-hidden="true">🌓</span>
-        </button>
-        <button id="menu-toggle" class="icon-btn tap-target show-on-mobile" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
-          <span aria-hidden="true">☰</span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Menu mobile (hamburger) -->
-  <nav id="mobile-drawer" class="mobile-drawer" aria-label="Mobile menu">
-    <ul>
-      <li><a href="#sobre" data-scroll class="tap-target">About</a></li>
-      <li><a href="#projetos" data-scroll class="tap-target">Projects</a></li>
-      <li><a href="#skills" data-scroll class="tap-target">Skills</a></li>
-      <li><a href="#contacto" data-scroll class="tap-target">Contact</a></li>
-      <li><a href="cv.pdf" class="tap-target" download>Descarregar CV</a></li>
-    </ul>
-  </nav>
-
-  <main id="conteudo">
+  <main id="content">
     <!-- Hero -->
     <section id="hero" class="section hero">
       <div class="container hero__inner">
@@ -56,7 +44,7 @@
             I build simple, scalable and reliable software — from backend to frontend. I care about clarity, accessibility and performance.
           </p>
           <div class="hero__cta">
-            <a href="#projetos" data-scroll class="btn btn-primary tap-target">View Projects</a>
+            <a href="#projects" data-scroll class="btn btn-primary tap-target">View Projects</a>
             <a href="mailto:nelson10almeida@hotmail.com" class="btn btn-ghost tap-target">Contact</a>
           </div>
           <ul class="stack-chips" aria-label="Primary stack">
@@ -80,12 +68,13 @@
       </div>
     </section>
 
-    <!-- Sobre -->
-    <section id="sobre" class="section">
+    <!-- About -->
+    <section id="about" class="section">
       <div class="container flow">
         <h2>About</h2>
         <p>
-          I'm a software engineer who loves solving problems and turning requirements into clean, maintainable solutions. I enjoy designing robust APIs, writing meaningful tests, and creating interfaces focused on readability.
+          I'm a software engineer who loves solving problems and turning requirements into clean, maintainable solutions.
+          I enjoy designing robust APIs, writing meaningful tests, and creating interfaces focused on readability.
         </p>
         <p>
           I currently work as a Commercial Consultant while studying Computer Engineering. Outside of code, I enjoy the gym and video games.
@@ -93,8 +82,8 @@
       </div>
     </section>
 
-    <!-- Projetos -->
-    <section id="projetos" class="section">
+    <!-- Projects -->
+    <section id="projects" class="section">
       <div class="container flow">
         <div class="section-head">
           <h2>Projects</h2>
@@ -104,12 +93,12 @@
       </div>
     </section>
 
-    <!-- Skills (grupos) -->
+    <!-- Skills (groups) -->
     <section id="skills" class="section">
       <div class="container">
         <h2>Skills</h2>
         <div class="skills-groups">
-          <section aria-labelledby="linguagens"><h3 id="linguagens">Languages</h3>
+          <section aria-labelledby="languages"><h3 id="languages">Languages</h3>
             <ul class="tag-list">
               <li>Python</li><li>Java</li><li>C#</li><li>Kotlin</li><li>JavaScript</li><li>SQL</li>
             </ul>
@@ -129,7 +118,7 @@
               <li>SQL Server</li><li>PostgreSQL</li><li>Pandas</li>
             </ul>
           </section>
-          <section aria-labelledby="testes"><h3 id="testes">Testing</h3>
+          <section aria-labelledby="testing"><h3 id="testing">Testing</h3>
             <ul class="tag-list">
               <li>PyTest</li><li>Selenium</li><li>Unit Tests</li>
             </ul>
@@ -138,16 +127,16 @@
       </div>
     </section>
 
-    <!-- Tecnologias (logos) -->
-    <section id="tecnologias" class="section">
+    <!-- Technologies (logos) -->
+    <section id="technologies" class="section">
       <div class="container flow">
         <h2>Technologies</h2>
         <div id="tech-grid" class="tech-grid" aria-label="Technology logos"></div>
       </div>
     </section>
 
-    <!-- Contacto -->
-    <section id="contacto" class="section">
+    <!-- Contact -->
+    <section id="contact" class="section">
       <div class="container flow">
         <h2>Contact</h2>
         <p>Prefer email? <a href="mailto:nelson10almeida@hotmail.com">nelson10almeida@hotmail.com</a></p>
@@ -167,13 +156,16 @@
     </div>
   </footer>
 
-  <!-- Bottom Nav (fixa no mobile) -->
+  <!-- Bottom Nav (mobile fixed) -->
   <nav class="bottom-nav" aria-label="Bottom navigation">
-    <a href="#sobre" data-scroll class="bottom-link tap-target" aria-current="page">About</a>
-    <a href="#projetos" data-scroll class="bottom-link tap-target">Projects</a>
-    <a href="#skills" data-scroll class="bottom-link tap-target">Skills</a>
-    <a href="#contacto" data-scroll class="bottom-link tap-target">Contact</a>
-  </nav>
+    <div class="bottom-nav__links">
+      <a href="#about" data-scroll class="bottom-link tap-target">About</a>
+      <a href="#projects" data-scroll class="bottom-link tap-target">Projects</a>
+      <a href="#skills" data-scroll class="bottom-link tap-target">Skills</a>
+      <a href="#technologies" data-scroll class="bottom-link tap-target">Tech</a>
+      <a href="#contact" data-scroll class="bottom-link tap-target">Contact</a>
+    </div>
+    </nav>
 
   <script src="projetos.js" defer></script>
   <script src="main.js" defer></script>
