@@ -21,11 +21,9 @@
           <li><a class="nav-link tap-target" href="#skills" data-scroll>Skills</a></li>
           <li><a class="nav-link tap-target" href="#technologies" data-scroll>Technologies</a></li>
           <li><a class="nav-link tap-target" href="#contact" data-scroll>Contact</a></li>
-          <li><a class="nav-link tap-target" href="cv.pdf" download>Resume</a></li>
         </ul>
       </nav>
       <div class="topbar__actions">
-        <a href="cv.pdf" download class="icon-btn tap-target only-mobile" aria-label="Download Resume">CV</a>
         <button id="theme-toggle" class="icon-btn tap-target" aria-pressed="false" aria-label="Toggle light/dark theme">
           <span aria-hidden="true">🌓</span>
         </button>
@@ -45,7 +43,7 @@
           </p>
           <div class="hero__cta">
             <a href="#projects" data-scroll class="btn btn-primary tap-target">View Projects</a>
-            <a href="mailto:nelson10almeida@hotmail.com" class="btn btn-ghost tap-target">Contact</a>
+            <a href="#contact" data-scroll class="btn btn-ghost tap-target">Contact</a>
           </div>
           <ul class="stack-chips" aria-label="Primary stack">
             <li>Python</li><li>Java</li><li>C#</li><li>Kotlin</li><li>JavaScript</li><li>SQL Server</li><li>Django</li>
@@ -139,7 +137,25 @@
     <section id="contact" class="section">
       <div class="container flow">
         <h2>Contact</h2>
-        <p>Prefer email? <a href="mailto:nelson10almeida@hotmail.com">nelson10almeida@hotmail.com</a></p>
+        <p class="muted">Send me a message using the form below.</p>
+        <form id="contact-form" class="form" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="from_name" type="text" autocomplete="name" required maxlength="100" />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="from_email" type="email" autocomplete="email" required inputmode="email" />
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required maxlength="2000"></textarea>
+          </div>
+          <div class="form-actions">
+            <button id="send-btn" type="submit" class="btn btn-primary tap-target">Send</button>
+            <p id="form-status" class="form-status muted" role="status" aria-live="polite"></p>
+          </div>
+        </form>
         <ul class="social-list">
           <li><a class="tap-target" href="https://github.com/nelsonalmeida2" target="_blank" rel="noopener">GitHub</a></li>
           <li><a class="tap-target" href="https://www.linkedin.com/in/nelson-almeida55/" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -168,6 +184,7 @@
     </nav>
 
   <script src="projetos.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
   <script src="main.js" defer></script>
 </body>
 </html>

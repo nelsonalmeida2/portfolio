@@ -154,3 +154,77 @@ technologyImages.forEach((name) => {
   img.src = `img/technologies/${name}`;
   techGrid?.appendChild(img);
 });
+
+
+// ===== Contact form (EmailJS) =====
+(function() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const statusEl = document.getElementById('form-status');
+  const sendBtn = document.getElementById('send-btn');
+
+  // Init EmailJS
+  try {
+    if (window.emailjs) {
+      emailjs.init('AX3Qt46by3SKUwIOs');
+    }
+  } catch (e) {
+    console.warn('EmailJS init failed:', e);
+  }
+
+  function validEmail(value) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!window.emailjs) {
+      statusEl.textContent = 'Form service unavailable. Please try again later.';
+      statusEl.className = 'form-status is-error';
+      return;
+    }
+
+    const formData = new FormData(form);
+    const from_name = String(formData.get('from_name') || '').trim();
+    const from_email = String(formData.get('from_email') || '').trim();
+    const message = String(formData.get('message') || '').trim();
+
+    // Basic validation
+    if (!from_name || !from_email || !message) {
+      statusEl.textContent = 'Please fill in all fields.';
+      statusEl.className = 'form-status is-error';
+      return;
+    }
+    if (!validEmail(from_email)) {
+      statusEl.textContent = 'Please enter a valid email address.';
+      statusEl.className = 'form-status is-error';
+      return;
+    }
+
+    // Submit via EmailJS
+    sendBtn.disabled = true;
+    const originalText = sendBtn.textContent;
+    sendBtn.textContent = 'Sending…';
+    statusEl.textContent = '';
+    statusEl.className = 'form-status';
+
+    try {
+      await emailjs.send('service_3k9ibpk', 'template_quzt3xd', {
+        from_name,
+        from_email,
+        message,
+      });
+      form.reset();
+      statusEl.textContent = 'Message sent! Thank you — I will reply soon.';
+      statusEl.className = 'form-status is-success';
+    } catch (err) {
+      console.error(err);
+      statusEl.textContent = 'Sorry, something went wrong. Please try again.';
+      statusEl.className = 'form-status is-error';
+    } finally {
+      sendBtn.disabled = false;
+      sendBtn.textContent = originalText;
+    }
+  });
+})();
